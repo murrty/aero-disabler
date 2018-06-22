@@ -13,6 +13,8 @@ namespace AERODisabler {
     public partial class Form1 : Form {
         bool isDisabled = false;
 
+        // 0 = off
+        // 1 = on
         [DllImport("dwmapi.dll", EntryPoint = "DwmEnableComposition")]
         extern static uint DwmEnableComposition(uint compositionAction);
         [DllImport("dwmapi.dll", PreserveSig = false)]
